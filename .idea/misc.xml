@@ -6,8 +6,13 @@
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/border.xml" value="0.2703125" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_main2.xml" value="0.1793478260869565" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_text_editor.xml" value="0.23777173913043478" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_topics_list.xml" value="0.23777173913043478" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_topics_list_item.xml" value="0.4" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/fragment_second.xml" value="0.1793478260869565" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/fragment_topics_list.xml" value="0.1743659420289855" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/topics_list_item.xml" value="0.264" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/topics_list_item2.xml" value="0.1265625" />
       </map>
     </option>
   </component>

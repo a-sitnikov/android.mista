@@ -1,5 +1,8 @@
 package com.acsent.androidmista
 
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.util.*
@@ -36,15 +39,19 @@ class TopicsListItemResponse {
     var answ: Int = 0
 }
 
-
 object API {
+
+    val domain: String = "https://forum.mista.ru"
+    val urlTopicsList: String = "api/topic.php"
+
     fun getTopicsList(request: TopicsListRequest? = null): Array<TopicsListItemResponse> {
+
         var item1 = TopicsListItemResponse()
         item1.id = 1
         item1.user0 = "user0_1"
         item1.user  = "user_1"
         item1.sect1 = "sect1_1"
-        item1.text  = "topic <b>bold</b> 1"
+        item1.text  = "topic <b>bold</b> 1о дардврплодв по авлпр пр ваполдарв дплора впорв д вапдрвдлопр волпр а"
         item1.answ  = 20
 
         var item2= TopicsListItemResponse()
@@ -54,6 +61,7 @@ object API {
         item2.sect1 = "sect1_2"
         item2.text  = "topic <b>bold</b> 2"
         item2.answ  = (1..200).random()
-        return arrayOf(item1, item2)
+        return arrayOf(item1, item2, item1, item2)
     }
+
 }
