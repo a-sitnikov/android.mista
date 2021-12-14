@@ -27,10 +27,7 @@ class TopicsListFragment : Fragment() {
 
         binding.swipeRefreshLayout.setOnRefreshListener {
             binding.swipeRefreshLayout.isRefreshing = false
-
-            //binding.viewModel.ge
-            //val newList = API.getTopicsList()
-            //(binding.recyclerView.adapter as ListViewAdapter).updateData(newList);
+            viewModel.update()
         }
 
         return binding.root

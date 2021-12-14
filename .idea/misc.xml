@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/border.xml" value="0.2703125" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/border_bottom.xml" value="0.2703125" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/header.xml" value="0.2703125" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/drawable/repeat_background.xml" value="0.2703125" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_main2.xml" value="0.1793478260869565" />
         <entry key="..\:/utils/android_projects/AndroidMista/app/src/main/res/layout/activity_text_editor.xml" value="0.23777173913043478" />

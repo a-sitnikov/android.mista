@@ -1,6 +1,7 @@
 package com.acsent.androidmista.network
 import android.text.format.DateUtils
 import com.squareup.moshi.Json
+import java.text.SimpleDateFormat
 import java.util.*
 
 data class TopicsListItem (
@@ -28,7 +29,7 @@ fun getUpdatedStr(): String {
     val pattern: String = if (DateUtils.isToday(updated * 1000)) "HH:mm" else "dd.MM.yy"
 
     val date = Date(updated * 1000)
-    val sdf = java.text.SimpleDateFormat(pattern)
+    val sdf = SimpleDateFormat(pattern)
     return sdf.format(date)
     }
 }

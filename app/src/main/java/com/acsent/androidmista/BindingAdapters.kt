@@ -16,10 +16,14 @@
 
 package com.acsent.androidmista
 
+import android.content.res.Resources
+import android.os.Build
+import android.text.Html
 import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -40,7 +44,10 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<TopicsListItem>?) {
 fun bindWidth(view: View, item: Any) {
     // сбрасывается на wrap_content
     var layoutParams = view.layoutParams
-    layoutParams.width = FrameLayout.LayoutParams.MATCH_PARENT
+    layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+    if (layoutParams is RecyclerView.LayoutParams) {
+        layoutParams.bottomMargin = (5 * Resources.getSystem().displayMetrics.density).toInt()
+    }
     view.layoutParams = layoutParams
 }
 
@@ -51,6 +58,17 @@ fun bindWidth(view: View, item: Any) {
 fun bindText(textView: TextView, text: String?) {
     text?.let {
         textView.text = text
+    }
+}
+
+@BindingAdapter("htmltext")
+fun bindHTMLText(textView: TextView, text: String?) {
+    text?.let {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            textView.text = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            textView.text = Html.fromHtml(text);
+        }
     }
 }
 

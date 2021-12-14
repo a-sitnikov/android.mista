@@ -10,5 +10,7 @@
         android:id="@+id/fragmentContainerView"
         android:name="com.acsent.androidmista.topicsList.TopicsListFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/repeat_background"
+        android:tileMode="repeat" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

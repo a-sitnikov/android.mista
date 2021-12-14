@@ -22,7 +22,11 @@ class ListViewAdapter: ListAdapter<TopicsListItem, ListViewAdapter.ItemViewHolde
         }
 
         override fun areContentsTheSame(oldItem: TopicsListItem, newItem: TopicsListItem): Boolean {
-            return false
+            return (oldItem.author == newItem.author) &&
+                   (oldItem.user == newItem.user) &&
+                   (oldItem.text == newItem.text) &&
+                   (oldItem.section == newItem.section) &&
+                   (oldItem.count == newItem.count)
         }
     }
 

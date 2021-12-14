@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="item"
             type="com.acsent.androidmista.network.TopicsListItem" />
@@ -13,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        android:background="@drawable/border"
         android:orientation="vertical"
         app:width="@{item}">
 
@@ -20,7 +23,9 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="22dp"
-            android:background="?attr/colorHeader">
+            android:background="?attr/colorHeader"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
 
             <TextView
                 android:id="@+id/author"
@@ -45,27 +50,30 @@
         <FrameLayout
             android:id="@+id/frame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/purple_200">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/teal_200"
+                android:background="@color/design_default_color_on_primary"
                 android:gravity="center_vertical"
                 android:minHeight="25dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
                 android:text="text"
                 android:textColor="?attr/colorLink"
-                app:text="@{item.text}"/>
+                android:textSize="16sp"
+                app:htmltext="@{item.text}" />
         </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:background="?attr/colorHeader">
+            android:background="?attr/colorHeader"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
 
             <TextView
                 android:id="@+id/user"
@@ -86,7 +94,7 @@
                 android:textColor="?attr/editTextColor"
                 app:layout_constraintStart_toEndOf="@id/user"
                 app:layout_constraintTop_toTopOf="parent"
-                app:text="@{item.updatedStr}"/>
+                app:text="@{item.updatedStr}" />
 
             <TextView
                 android:id="@+id/count"

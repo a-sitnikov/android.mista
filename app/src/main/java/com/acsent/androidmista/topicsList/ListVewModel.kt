@@ -22,10 +22,10 @@ class ListViewModel : ViewModel() {
     val list: LiveData<List<TopicsListItem>> = _list
 
     init {
-        getList()
+        fetchData()
     }
 
-    private fun getList() {
+    private fun fetchData() {
 
         viewModelScope.launch {
             _status.value = ApiStatus.LOADING
@@ -38,5 +38,9 @@ class ListViewModel : ViewModel() {
                 Log.e("topicsList.getList", e.toString())
             }
         }
+    }
+
+    fun update() {
+        fetchData()
     }
 }
